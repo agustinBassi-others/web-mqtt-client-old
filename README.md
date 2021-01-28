@@ -1,130 +1,81 @@
-![header](doc/header.png)
+# Web MQTT Client
 
-# Open source MQTT Platform
+**Autor**: Agustin Bassi - 2021
 
-Author: Agustin Bassi - 2020
+## Tabla de contenido
 
-## 
-## Table of Contents
+* [Información importante](#Información-importante)
+* [Introducción](#introducción)
+* [Instalar dependencias](#instalar-dependencias)
+* [Descargar el código](#descargar-el-código)
+* [Ejecutar la aplicación](#ejecutar-la-aplicación)
+* [Colaborar](#colaborar)
+* [Licencia](#licencia)
 
+## Información importante
 
-* [Platform Introduction](#platform-introduction)
-* [Install dependencies](#install-dependencies)
-* [Run the application](#run-the-application)
-* [Test the application](#test-the-application)
-* [Run mqtt-client-arduino (optional)](#run-mqtt-client-arduino-(optional))
-* [Want to help?](#want-to-help-?)
-* [License](#license)
+> Para leer artículos relacionados con tecnologías IoT visitar nuestro sitio web [helloiot.net](https://helloiot.net).
 
-## 
-## Platform Description
+> Para ver toda la documentación de los proyectos de manera abarcativa y organizada visitar nuestra [wiki de Hello IoT](https://github.com/hello-iot/documentation/wiki).
 
-The goal of this project is to create an open source MQTT Platform to be used as a part of an IoT system, based on MQTT protocol.
+> En caso de encontrar algún problema, comentarlo en nuestro [foro de Hello IoT](https://groups.google.com/g/helloiot) para encontrar una solución entre los miembros de la comunidad.
 
-The platform consists in several modules described below (All of them are well described in the [Project Wiki](https://github.com/agustinBassi/mq-connection/wiki)).
+> Si bien no es restrictivo, muchos de los proyectos implementados en Hello IoT utilizan Visual Studio Code como IDE de desarrollo debido a su potencia y extensibilidad. Si se desea se puede instalar desde [este link](https://code.visualstudio.com/download). 
 
-* **MQTT Broker**: Raspberry Pi that runs a MQTT Broker to interact with the HTTP client via WebSockets and to MQTT clients via MQTT protocol. Besides, has a HTTP server in order to serve the page of the HTTP Client.
-* **MQTT Client Web**: A Single Page Application (SPA) that communicates with MQTT Broker via Websockets. It can send and receive MQTT topics and perform many actions. The code used for MQTT connection is based on [this project](https://github.com/jpmens/simple-mqtt-websocket-example).
-* **MQTT Client Arduino**: A device that connects to MQTT Broker in order to establish a connection to send/receive topics. The device connects to WiFi and then, connects to the MQTT Broker. 
+> Para poder probar el código es necesario contar con un broker MQTT. Consultar nuestra [sección de proyectos](https://www.helloiot.net/pages/projects/) para encontrar información al respecto.
 
-In the figure below there is a description of the platform modules and how they interact each others.
+## Introducción
 
-![architecture](doc/architecture.png)
+Este proyecto es una Single Page Application (SPA) que se comunica con un broker MQTT através de WebSockets y actúa como una terminal, donde se pueden enviar topics, suscribirse y visualizar los mensajes. 
 
-## 
-## Install dependencies
+Funciona en cualquier navegador actual y está implementado utilizando código JavaScript, HTML y CSS. Para la parte de estilos se utiliza [Material Design](). La conexión MQTT se implementa utilizando la biblioteca [Paho MQTT de Eclipse Fundation]().
 
+## Instalar dependencias
 
-The application runs over Raspberry Pi 3+. To install Raspberry Pi OS refer to [official documentation](https://www.raspberrypi.org/documentation/installation/installing-images/).
+Para este proyecto únicamente es necesario un navegador actual, aunque se recomienda que el contenido sea accedido a través de un servidor web. 
 
-The platform needs the next dependencies.
+Se puede implementar cualquier servidor de preferencia. Si se utiliza Visual Studio Code la extensión [Live Server](https://github.com/ritwickdey/vscode-live-server.git) es un servidor web integrado extremadamente fácil de utilizar.
 
-* Docker & Docker-Compose (installation steps in [this link](https://devdojo.com/bobbyiliev/how-to-install-docker-and-docker-compose-on-raspberry-pi)).
+## Descargar el código
 
-_Although the application is designed to run on a Raspberry Pi 3+, it can runs on any system with Docker & Docker Compose installed. Docker installation steps in [official documentation](https://docs.docker.com/get-docker/). Docker-Compose installation steps in [official documentation](https://docs.docker.com/compose/install/)._
-
-## 
-## Run the application
-
-Once dependencies are installed in the Raspberry Pi do the next steps.
-
-1. Download the platform code (this repository) with the next command.
+Desde la esquina superior derecha realizar un `fork` de este proyecto a la cuenta personal. Una vez realizado el fork descargar el código con el siguiente comando (poner el usuario de github en la URL):
 
 ```
-git clone https://github.com/agustinBassi/mq-connection.git
-cd mq-connection/
+git clone https://github.com/USER/embedded-mqtt-client
 ```
 
-2. Start the MQTT Broker and the HTTP server with the next command.
+> En caso de no poseer una cuenta de Github se puede realizar un `clone` directo de este repositorio.
 
-```
-docker-compose up
-```
+Abrir la carpeta del proyecto desde VS Code o el IDE de preferencia luego de la descarga.
 
-3. Run the MQTT Web Client opening [http://raspberri_pi_ip:5001/](http://raspberri_pi_ip:5001/) in the web browser.
+## Ejecutar la aplicación
 
-## 
-## Test the application
+Como primer paso será necesario abrir la aplicación accediendo al servidor web local. Si se instaló Live Server en VSCode hacer click derecho sobre el archivo index.html y seleccionar la opción `Open with Live Server` dentro del menú contextual. Esto abrirá automáticamente la aplicación en el navegador.
 
-To test broker-client communication open `mqtt-client-web` in the browser (step 3 above). 
+> De manera opcional se puede acceder a la aplicación mediante `file://PATH_TO_PROJECT/index.html`.
 
-1. Set the MQTT host IP in the field `MQTT host`, set an appropiate `Port` (default 9001) and `MQTT Client` and press the button `CONNECT` to connect to broker. 
-2. Set a `Topic to subscribe` and press the button `SUBSCRIBE` to receive messages from broker (default all topic '#').
-3. Set a `Topic to publish` and `Payload to publish` and press `PUBLISH` to send a message to broker.
+## Probar la aplicación
 
-In the next figure there is an example of connection to MQTT host at 192.168.0.202 IP address, at 9001 port setting client as test-client-001. In the log lines can be seen steps done (1,2,3).
+Para testear que la comunicación con el broker funcione correctamente, dentro de la aplicación realizar las siguientes configuraciones:
 
-![mqtt-client-web-running](doc/mqtt-web-client-running.png)
+1. Configurar la IP y el puerto del host MQTT  y un nombre de cliente en los campos `MQTT host`, `MQTT port` y `MQTT Client` y presionar el botón `CONNECT`.
+2. Configurar un `Topic to subscribe` y presionar el boton `SUBSCRIBE` para recibir mensajes desde el broker (por defecto todos los topics '#').
+3. Configurar un topic y un payload en los campos `Topic to publish` y `Payload to publish` y presionar el botón `PUBLISH` para enviar el topic al broker. 
 
-Try to subscribe or publish messages from another clients in order to see how interacts web client with the others through the MQTT broker.
+Como el cliente ya se encuentra suscripto a todos los topics, en la sección `Logs` aparecerá el topic publicado a modo de `echo`.
 
-## 
-## Run mqtt-client-arduino (optional)
+En la siguiente figura hay una demostración de las configuraciones necesarias.
 
-To run the `mqtt-client-arduino` it is necessary to have installed [PlatformIO](https://platformio.org/) in order to compile the project and upload the code into the board. In [this link](https://iot-es.herokuapp.com/post/details/17) there is a guide to install PlatformIO for Visual Studio Code, compile and run a project. More details in the [Project Wiki](https://github.com/agustinBassi/mq-connection/wiki).
+![web-mqtt-client-running](doc/mqtt-web-client-running.png)
 
-Once PlatformIO is installed, set WiFi access and MQTT host IP address properly (the IP of the Raspberry Pi) in the file `mqtt-client-arduino/src/main.cpp` as follow (lines 48-52).
+## Colaborar
 
-```c
-// Wifi settings
-const String WIFI_SSID   = "USER_WIFI_SSID";
-const String WIFI_PASS   = "USER_WIFI_PASSWORD";
-// Mqtt server settings
-const String MQTT_SERVER = "MQTT_HOST_IP_ADDRESS";
-```
+Las mejoras son bienvenidas. Para ello es necesario hacer un fork de este proyecto, aplicar las mejoras y enviarlas mediante un pull request. Luego de la revisión, podrán ser incluídas.
 
-Then, plug the embedded device via USB and run the command below to compile, upload the code into the board and open the serial monitor, all in the same operation (Change `platformio` for `pio` if command fails).
+Si te gustó el proyecto no dudes en apoyar al proyecto con una `Star`, y si estás interesado en recibir novedades podés aplicar un `Watch`. Estas acciones ayudan a fomentar la participación y creación de nuevos proyectos dentro de [Hello IoT](https://github.com/hello-iot/).
 
-```sh
-platformio run --target upload && platformio device monitor
-```
+## Licencia
 
-When device starts to run, an output link below should be shown.
+[MIT](https://choosealicense.com/licenses/mit/)
 
-```sh
-Welcome to MQ Connection Arduino client!
-Connecting to WiFi SSID...
-WiFi connected
-IP address: 192.168.1.44
-Attempting MQTT connection...connected
-Subscribed to topic: MQ-connection-esp32-1/config/publish_time
-Sending MQTT Topic-Payload: MQ-connection-esp32-1/pressure -> 1001
-...
-Sending MQTT Topic-Payload: MQ-connection-esp32-1/pressure -> 1010
-```
-
-## 
-## Want to help?
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-If someone want to helpme, every bit of effort will be appreciated. In [this link](https://github.com/agustinBassi/mq-connection/projects/1) there is the project status board. You can take any card you want (or propose one) from the ToDo list and start to work.
-
-If you find it useful please helpme following my Github user and give to this project a Star. This will animate me to continue contribuiting with the great open source community.
-
-## 
-## License
-
-This project is licensed under the GPLV3 License.
-
-![footer](doc/footer.png)
+![footer](doc/helloiot-footer.png)

@@ -1,0 +1,74 @@
+html, body, .my-wrapper {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+nav {
+    width: auto;
+    background-color: #18246C;
+}
+
+.row-view {
+    margin: 3vh 0vh 4vh 1vh;
+}
+
+.title-view {
+    margin: 3vh 0vh 3vh 1vh;
+}
+
+.text-fotter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: left;
+}
+
+.button-view {
+    background-color:#49BFE3;
+    width: 100%;
+}
+
+.button-view:hover {
+    background-color: #64DEDF;
+}
+
+.page-footer {
+    background: #18246C;  
+}
+
+.flex-row-footer {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+}
+
+.flex-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-footer--logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logos-footer {
+    margin-right: 0.5vw;
+}
+
+/* Sticky footer */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="styles/materialize.css" media="screen,projection" type="text/css" rel="stylesheet" />
+        <link href="styles/styles.css" media="screen,projection" type="text/css" rel="stylesheet" />
+        <link rel="icon" type="image/png" href="img/favicon.ico" sizes="48x48" />
+        <title>Web MQTT Client | Hello IoT</title>
+    </head>
+    <body>
+        <main>
+            <nav>
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#!" class="brand-logo left">Web MQTT Client</a>
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li class="active"><a href="#">Web MQTT Client</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="row row-view">
+                    <h5 class="title-view">Connection settings</h5>
+                    <div class="col s12 m12 l4 xl4">
+                        <div class="input-field l5 m9 s9">
+                            <input placeholder="localhost" id="mqtt_host" type="text" class="validate">
+                            <label for="mqtt_host">MQTT host</label>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l2 xl2">
+                        <div class="input-field  l1 s3 m3">
+                            <input placeholder="9001" id="mqtt_port" type="text" class="validate">
+                            <label for="mqtt_port">Port</label>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l4 xl4">
+                        <div class="input-field l4 m9 s9">
+                            <input placeholder="MQ-Connection-Web-Client" id="mqtt_client" type="text" class="validate">
+                            <label for="mqtt_client">MQTT client</label>
+                        </div>
+                    </div>
+                    <div class="col s5 m5 l2 xl2">
+                        <button class="btn waves-effect waves-light button-view" onclick="App_ConnectToMqttBroker();"
+                            name="mqtt_connect_button">Connect</button>
+                    </div>
+                </div>
+                <div class="row row-view">
+                    <div class="col s12 m12 l10 xl10">
+                        <div class="input-field l10 m9 s9">
+                            <input placeholder="#" id="mqtt_topic_subscription" type="text" class="validate">
+                            <label for="mqtt_topic_subscription">Topic to subscribe</label>
+                        </div>
+                    </div>
+                    <div class="col s5 m5 l2 xl2">
+                        <div class="l2 m3 s3">
+                            <button class="btn waves-effect waves-light button-view" onclick="App_SubscribeMqttTopic();" name="mqtt_subscribe_button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-view">
+                    <div class="col s12 m12 l5 xl5">
+                        <div class="input-field l4 m3 s3">
+                            <input placeholder="mq-connection/default-topic" id="mqtt_topic_publish" type="text" class="validate">
+                            <label for="mqtt_topic_publish">Topic to publish</label>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l5 xl5">
+                        <div class="input-field l6 m6 s6">
+                            <input placeholder="mq-connection/default-payload" id="mqtt_payload_publish" type="text" class="validate">
+                            <label for="mqtt_payload_publish">Payload to publish</label>
+                        </div>
+                    </div>
+                    <div class="col s5 m5 l2 xl2">
+                        <div class="l2 m3 s3">
+                            <button class="btn waves-effect waves-light button-view" onclick="App_PublishMqttTopic();" name="mqtt_publish_button">Publish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row row-view">
+                    <h5 class="title-view">Information & logs</h5>
+                    <div class="col s12 m12 l12 xl12">
+                        <div class="input-field l10 m12 s12">
+                            <textarea id="logs_textarea" class="materialize-textarea" style="height: 110px;" readonly></textarea>
+                            <label for="logs_textarea"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row flex-row-footer">
+                    <div class="col s12 m12 l4 xl4">
+                        <div class="left-align left flex-footer">
+                            Hello IoT - 2021 | Licence MIT
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l4 xl4">
+                        <div class="text-center center-align center">
+                            <a href="https://helloiot.net" target="_blank"><img src="img/logo.png" class="img-fluid center-align center" width="60"></a>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l4 xl4">
+                        <ul class="white-text right-align flex-footer--logos">
+                            <li><p style="padding-right: 10px;">Follow Hello IoT</p></li>
+                            <li><a href="https://www.helloiot.net/" target="_blank"><img src="img/icon-site.svg" alt="Icon Site" class="logos-footer logo-hover"></a></li>
+                            <li><a href="https://github.com/hello-iot" target="_blank"><img src="img/icon-github.svg" alt="Icon Github" class="logos-footer"></a></li>
+                            <li><a href="https://twitter.com/hello__iot" target="_blank"><img src="img/icon-twitter.svg" alt="Icon Twitter"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/mqttws31.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
