@@ -20,7 +20,7 @@
 
 > En caso de encontrar algún problema, comentarlo en nuestro [foro de Hello IoT](https://groups.google.com/g/helloiot) para encontrar una solución entre los miembros de la comunidad.
 
-> Si bien no es restrictivo, muchos de los proyectos implementados en Hello IoT utilizan Visual Studio Code como IDE de desarrollo debido a su potencia y extensibilidad. Si se desea se puede instalar desde [este link](https://code.visualstudio.com/download). 
+> Muchos de los proyectos implementados en Hello IoT utilizan Visual Studio Code como IDE de desarrollo debido a su potencia y capacidad de instalar extensiones útiles de desarrollo, por lo que se recomienda descargarlo desde [este link](https://code.visualstudio.com/download). 
 
 > Para poder probar el código es necesario contar con un broker MQTT. Consultar nuestra [sección de proyectos](https://www.helloiot.net/pages/projects/) para encontrar información al respecto.
 
@@ -41,20 +41,18 @@ Se puede implementar cualquier servidor de preferencia. Si se utiliza Visual Stu
 Desde la esquina superior derecha realizar un `fork` de este proyecto a la cuenta personal. Una vez realizado el fork descargar el código con el siguiente comando (poner el usuario de github en la URL):
 
 ```
-git clone https://github.com/USER/embedded-mqtt-client
+git clone https://github.com/USER/web-mqtt-client.git
 ```
 
 > En caso de no poseer una cuenta de Github se puede realizar un `clone` directo de este repositorio.
 
-Abrir la carpeta del proyecto desde VS Code o el IDE de preferencia luego de la descarga.
+Abrir la carpeta del proyecto desde VS Code luego de la descarga.
 
 ## Ejecutar la aplicación
 
 Como primer paso será necesario abrir la aplicación accediendo al servidor web local. Si se instaló Live Server en VSCode hacer click derecho sobre el archivo index.html y seleccionar la opción `Open with Live Server` dentro del menú contextual. Esto abrirá automáticamente la aplicación en el navegador.
 
 > De manera opcional se puede acceder a la aplicación mediante `file://PATH_TO_PROJECT/index.html`.
-
-## Probar la aplicación
 
 Para testear que la comunicación con el broker funcione correctamente, dentro de la aplicación realizar las siguientes configuraciones:
 
@@ -72,7 +70,7 @@ En la siguiente figura hay una demostración de las configuraciones necesarias.
 
 Las mejoras son bienvenidas. Para ello es necesario hacer un fork de este proyecto, aplicar las mejoras y enviarlas mediante un pull request. Luego de la revisión, podrán ser incluídas.
 
-Si te gustó el proyecto no dudes en apoyar al proyecto con una `Star`, y si estás interesado en recibir novedades podés aplicar un `Watch`. Estas acciones ayudan a fomentar la participación y creación de nuevos proyectos dentro de [Hello IoT](https://github.com/hello-iot/).
+Si te gustó el proyecto no dudes en apoyarlo con una `Star`, y si estás interesado en recibir novedades podés aplicar un `Watch`. Estas acciones ayudan a fomentar la participación y creación de nuevos proyectos dentro de [Hello IoT](https://github.com/hello-iot/).
 
 ## Licencia
 
