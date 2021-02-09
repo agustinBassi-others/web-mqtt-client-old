@@ -14,15 +14,15 @@
 
 ## Información importante
 
-> Para leer artículos relacionados con tecnologías IoT visitar nuestro sitio web [helloiot.net](https://helloiot.net).
+> Para leer artículos relacionados con tecnologías IoT visitar nuestro sitio web [gotoiot.com](https://gotoiot.com).
 
-> Para ver toda la documentación de los proyectos de manera abarcativa y organizada visitar nuestra [wiki de Hello IoT](https://github.com/hello-iot/documentation/wiki).
+> Para ver toda la documentación de los proyectos de manera abarcativa y organizada visitar nuestra [wiki de Goto IoT](https://github.com/gotoiot/doc/wiki).
 
-> En caso de encontrar algún problema, comentarlo en nuestro [foro de Hello IoT](https://groups.google.com/g/helloiot) para encontrar una solución entre los miembros de la comunidad.
+> En caso de encontrar algún problema, comentarlo en nuestro [foro de Goto IoT](https://groups.google.com/g/gotoiot) para encontrar una solución entre los miembros de la comunidad.
 
-> Muchos de los proyectos implementados en Hello IoT utilizan Visual Studio Code como IDE de desarrollo debido a su potencia y capacidad de instalar extensiones útiles de desarrollo, por lo que se recomienda descargarlo desde [este link](https://code.visualstudio.com/download). 
+> Muchos de los proyectos implementados en Goto IoT utilizan Visual Studio Code como IDE de desarrollo debido a su potencia y capacidad de instalar extensiones útiles de desarrollo, por lo que se recomienda descargarlo desde [este link](https://code.visualstudio.com/download). 
 
-> Para poder probar el código es necesario contar con un broker MQTT. Consultar nuestra [sección de proyectos](https://www.helloiot.net/pages/projects/) para encontrar información al respecto.
+> Para poder probar el código es necesario contar con un broker MQTT. Consultar nuestra [sección de proyectos](https://www.gotoiot.com/pages/projects/) para encontrar información al respecto.
 
 ## Introducción
 
@@ -70,10 +70,10 @@ En la siguiente figura hay una demostración de las configuraciones necesarias.
 
 Las mejoras son bienvenidas. Para ello es necesario hacer un fork de este proyecto, aplicar las mejoras y enviarlas mediante un pull request. Luego de la revisión, podrán ser incluídas.
 
-Si te gustó el proyecto no dudes en apoyarlo con una `Star`, y si estás interesado en recibir novedades podés aplicar un `Watch`. Estas acciones ayudan a fomentar la participación y creación de nuevos proyectos dentro de [Hello IoT](https://github.com/hello-iot/).
+Si te gustó el proyecto no dudes en apoyarlo con una `Star`, y si estás interesado en recibir novedades podés aplicar un `Watch`. Estas acciones ayudan a fomentar la participación y creación de nuevos proyectos dentro de [Goto IoT](https://github.com/gotoiot/).
 
 ## Licencia
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-![footer](doc/helloiot-footer.png)
+![footer](doc/gotoiot-footer.png)
