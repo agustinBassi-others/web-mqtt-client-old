@@ -4,7 +4,6 @@
 
 ## Tabla de contenido
 
-* [Información importante](#Información-importante)
 * [Introducción](#introducción)
 * [Instalar dependencias](#instalar-dependencias)
 * [Descargar el código](#descargar-el-código)
@@ -12,19 +11,9 @@
 * [Colaborar](#colaborar)
 * [Licencia](#licencia)
 
-## Información importante
-
-> Para leer artículos relacionados con tecnologías IoT visitar nuestro sitio web [gotoiot.com](https://www.gotoiot.com).
-
-> Para ver toda la documentación de los proyectos de manera abarcativa y organizada visitar nuestra [wiki de Goto IoT](https://github.com/gotoiot/doc/wiki).
-
-> En caso de encontrar algún problema, comentarlo en nuestro [foro de Goto IoT](https://groups.google.com/g/gotoiot) para encontrar una solución entre los miembros de la comunidad.
-
-> Muchos de los proyectos implementados en Goto IoT utilizan Visual Studio Code como IDE de desarrollo debido a su potencia y capacidad de instalar extensiones útiles de desarrollo, por lo que se recomienda descargarlo desde [este link](https://code.visualstudio.com/download). 
-
-> Para poder probar el código es necesario contar con un broker MQTT. Consultar nuestra [sección de proyectos](https://www.gotoiot.com/pages/projects) para encontrar información al respecto.
-
 ## Introducción
+
+> Si todavía no conoces como está estructurada la plataforma Goto IoT es recomendable que leas la [información contextual](https://github.com/gotoiot/doc/wiki#informaci%C3%B3n-contextual) de nuestra wiki, que te puede ser de utilidad.
 
 Este proyecto es una Single Page Application (SPA) que se comunica con un broker MQTT através de WebSockets y actúa como una terminal, donde se pueden enviar topics, suscribirse y visualizar los mensajes. 
 
@@ -32,9 +21,9 @@ Funciona en cualquier navegador actual y está implementado utilizando código J
 
 ## Instalar dependencias
 
-Para este proyecto únicamente es necesario un navegador actual, aunque se recomienda que el contenido sea accedido a través de un servidor web. 
+Para correr este proyecto únicamente es necesario un navegador actual, aunque se recomienda que el contenido sea accedido a través de un servidor web. Se puede implementar cualquier servidor de preferencia, aunque si se utiliza Visual Studio Code la extensión [Live Server](https://github.com/ritwickdey/vscode-live-server.git) es un servidor web integrado extremadamente fácil de utilizar.
 
-Se puede implementar cualquier servidor de preferencia. Si se utiliza Visual Studio Code la extensión [Live Server](https://github.com/ritwickdey/vscode-live-server.git) es un servidor web integrado extremadamente fácil de utilizar.
+Así mismo será necesario contar con un broker MQTT corriendo para realizar las pruebas. En la [sección de proyectos de la web](https://www.gotoiot.com/pages/projects) o bien dentro de los [repositorios de Goto IoT](https://github.com/gotoiot?q=mqtt) se puede encontrar información al respecto.
 
 ## Descargar el código
 
