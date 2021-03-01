@@ -25,10 +25,10 @@ SOFTWARE.*/
 const DEFAULT_MQTT_HOST       = "localhost";
 const DEFAULT_MQTT_PORT       = 9001;
 const DEFAULT_MQTT_PATH       = "/mqtt";
-const DEFAULT_MQTT_CLIENT     = "MQ-Connection-Web-Client" + parseInt(Math.random() * 100, 10);
+const DEFAULT_MQTT_CLIENT     = "web-mqtt-client-" + parseInt(Math.random() * 100, 10);
 const DEFAULT_MQTT_TOPIC_SUB  = "#";
-const DEFAULT_MQTT_TOPIC_PUB  = "mq-connection/default-topic";
-const DEFAULT_MQTT_PAYLOAD    = "mq-connection/default-payload";
+const DEFAULT_MQTT_TOPIC_PUB  = "status";
+const DEFAULT_MQTT_PAYLOAD    = "{'status': 'running'}";
 // UNIQUE SETTINGS OF APPLICATION
 const MQTT_TIMEOUT            = 3;
 const MQTT_TLS_FLAG           = false

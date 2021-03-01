@@ -38,7 +38,7 @@
                     </div>
                     <div class="col s12 m12 l4 xl4">
                         <div class="input-field l4 m9 s9">
-                            <input placeholder="MQ-Connection-Web-Client" id="mqtt_client" type="text" class="validate">
+                            <input placeholder="web-mqtt-client" id="mqtt_client" type="text" class="validate">
                             <label for="mqtt_client">MQTT client</label>
                         </div>
                     </div>
@@ -63,13 +63,13 @@
                 <div class="row row-view">
                     <div class="col s12 m12 l5 xl5">
                         <div class="input-field l4 m3 s3">
-                            <input placeholder="mq-connection/default-topic" id="mqtt_topic_publish" type="text" class="validate">
+                            <input placeholder="status" id="mqtt_topic_publish" type="text" class="validate">
                             <label for="mqtt_topic_publish">Topic to publish</label>
                         </div>
                     </div>
                     <div class="col s12 m12 l5 xl5">
                         <div class="input-field l6 m6 s6">
-                            <input placeholder="mq-connection/default-payload" id="mqtt_payload_publish" type="text" class="validate">
+                            <input placeholder="{'status': 'running'}" id="mqtt_payload_publish" type="text" class="validate">
                             <label for="mqtt_payload_publish">Payload to publish</label>
                         </div>
                     </div>

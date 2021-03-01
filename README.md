@@ -27,7 +27,7 @@ Así mismo será necesario contar con un broker MQTT corriendo para realizar las
 
 ## Descargar el código
 
-Desde la esquina superior derecha realizar un `fork` de este proyecto a la cuenta personal. Una vez realizado el fork descargar el código con el siguiente comando (poner el usuario de github en la URL):
+Desde la esquina superior derecha en [la home de este repositorio](https://github.com/gotoiot/web-mqtt-client) realizar un `fork` a la cuenta personal. Una vez realizado el fork descargar el código con el siguiente comando (poner el usuario de github en la URL):
 
 ```
 git clone https://github.com/USER/web-mqtt-client.git
