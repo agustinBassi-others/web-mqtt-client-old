@@ -1,4 +1,4 @@
-# Web MQTT Client
+# Web Single Page Application Template
 
 **Autor**: Agustin Bassi - 2021
 
@@ -15,7 +15,7 @@
 
 > Si todavía no conoces como está estructurada la plataforma Goto IoT es recomendable que leas la [información contextual](https://github.com/gotoiot/doc/wiki#informaci%C3%B3n-contextual) de nuestra wiki, que te puede ser de utilidad.
 
-Este proyecto es una Single Page Application (SPA) que se comunica con un broker MQTT através de WebSockets y actúa como una terminal, donde se pueden enviar topics, suscribirse y visualizar los mensajes. 
+Este proyecto es un template para una Single Page Application (SPA). 
 
 Funciona en cualquier navegador actual y está implementado utilizando código JavaScript, HTML y CSS. Para la parte de estilos se utiliza [Material Design](). La conexión MQTT se implementa utilizando la biblioteca [Paho MQTT de Eclipse Fundation]().
 
